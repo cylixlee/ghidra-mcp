@@ -1,0 +1,3 @@
+[submodule "ref/GhidraMCP"]
+	path = ref/GhidraMCP
+	url = https://github.com/LaurieWired/GhidraMCP
