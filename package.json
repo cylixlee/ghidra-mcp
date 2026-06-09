@@ -1,7 +1,7 @@
 {
   "name": "@cylixlee/ghidra-mcp",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Simple TypeScript implementation of Ghidra MCP",
   "bin": {
     "ghidra-mcp": "dist/index.js"
   },
