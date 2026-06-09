@@ -1,0 +1,3 @@
+# ghidra-mcp
+
+Ghidra MCP
