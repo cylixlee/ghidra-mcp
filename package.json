@@ -1,6 +1,6 @@
 {
   "name": "@cylixlee/ghidra-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple TypeScript implementation of Ghidra MCP",
   "bin": {
     "ghidra-mcp": "dist/index.js"
@@ -13,8 +13,15 @@
     "start": "tsc && node dist/index.js",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Ghidra",
+    "MCP",
+    "Model Context Protocol",
+    "Reverse Engineering",
+    "Binary Analysis",
+    "CLI"
+  ],
+  "author": "Cylix Lee <cylix.lee@outlook.com>",
   "license": "MIT",
   "repository": {
     "type": "git",

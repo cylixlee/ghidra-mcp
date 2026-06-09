@@ -1,5 +1,9 @@
 # Ghidra MCP
 
+[![npm version](https://img.shields.io/npm/v/@cylixlee/ghidra-mcp)](https://www.npmjs.com/package/@cylixlee/ghidra-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/@cylixlee/ghidra-mcp)](https://www.npmjs.com/package/@cylixlee/ghidra-mcp)
+[![license](https://img.shields.io/npm/l/@cylixlee/ghidra-mcp)](https://github.com/cylixlee/ghidra-mcp/blob/main/LICENSE)
+
 Ghidra MCP compatible with [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP).
 
 This is a simple TypeScript implementation of Ghidra MCP, which alternates the [python script](https://github.com/LaurieWired/GhidraMCP/blob/main/bridge_mcp_ghidra.py) in the original repo.
