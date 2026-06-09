@@ -6,7 +6,18 @@ This is a simple TypeScript implementation of Ghidra MCP, which alternates the [
 
 ## Usage
 
-### OpenCode
+### Install Ghidra Extension
+
+1. Download [latest Ghidra extension](https://github.com/LaurieWired/GhidraMCP/releases/latest) from upstream releases.
+2. In Ghidra: `File` -> `Install Extensions` -> `+` -> select the ZIP -> restart Ghidra
+3. Ensure the plugin is enabled: `File` -> `Configure` -> `Developer` -> check `GhidraMCPPlugin`
+4. Verify the HTTP server port: `Edit` -> `Tool Options` -> `GhidraMCP HTTP Server` (default `8080`)
+
+### Configure MCP
+
+Now let's configure Ghidra MCP for your agent. Don't forget to replace the `--server` URL if you changed the port in `Edit -> Tool Options -> GhidraMCP HTTP Server`.
+
+#### OpenCode
 
 Add to your `opencode.jsonc` (project) or `~/.config/opencode/opencode.json` (global):
 
@@ -16,16 +27,16 @@ Add to your `opencode.jsonc` (project) or `~/.config/opencode/opencode.json` (gl
   "mcp": {
     "ghidra": {
       "type": "local",
-      "command": ["npx", "-y", "@cylixlee/ghidra-mcp", "--server", "http://127.0.0.1:17591/"],
+      "command": ["npx", "-y", "@cylixlee/ghidra-mcp", "--server", "http://127.0.0.1:8080/"],
       "enabled": true
     }
   }
 }
 ```
 
-Replace the `--server` URL if you changed the port in `Edit -> Tool Options -> GhidraMCP HTTP Server`.
 
-### Claude Code
+
+#### Claude Code
 
 Add to `.claude/mcp.json` (project) or `~/.claude/mcp.json` (global):
 
@@ -34,15 +45,14 @@ Add to `.claude/mcp.json` (project) or `~/.claude/mcp.json` (global):
   "mcpServers": {
     "ghidra": {
       "command": "npx",
-      "args": ["-y", "@cylixlee/ghidra-mcp", "--server", "http://127.0.0.1:17591/"]
+      "args": ["-y", "@cylixlee/ghidra-mcp", "--server", "http://127.0.0.1:8080/"]
     }
   }
 }
 ```
 
-Replace the `--server` URL if you changed the port in `Edit -> Tool Options -> GhidraMCP HTTP Server`.
-
 ### CLI Reference
+
 ```
 ghidra-mcp — MCP server for Ghidra
 
@@ -57,6 +67,6 @@ Options:
   --help                      Show this help message
 
 Examples:
-  ghidra-mcp --server http://127.0.0.1:17591/              # stdio mode
-  ghidra-mcp --server http://127.0.0.1:17591/ --sse 17592  # SSE mode
+  ghidra-mcp --server http://127.0.0.1:8080/              # stdio mode
+  ghidra-mcp --server http://127.0.0.1:8080/ --sse 8081   # SSE mode
 ```
