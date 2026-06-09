@@ -1,6 +1,6 @@
 {
   "name": "@cylixlee/ghidra-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple TypeScript implementation of Ghidra MCP",
   "bin": {
     "ghidra-mcp": "dist/index.js"
@@ -16,6 +16,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cylixlee/ghidra-mcp"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",

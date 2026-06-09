@@ -18,7 +18,7 @@ Required:
 
 Options:
   --sse <port>                Enable SSE transport on the given port
-  --help                      Show this help message
+  -h, --help                  Show this help message
 
 Examples:
   ghidra-mcp --server http://127.0.0.1:17591/              # stdio mode
@@ -29,7 +29,7 @@ const { values: args } = parseArgs({
 	options: {
 		server: { type: "string" },
 		sse: { type: "string" },
-		help: { type: "boolean", default: false },
+		help: { type: "boolean", default: false, short: "h" },
 	},
 })
 

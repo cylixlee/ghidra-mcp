@@ -64,7 +64,7 @@ Required:
 
 Options:
   --sse <port>                Enable SSE transport on the given port
-  --help                      Show this help message
+  -h, --help                  Show this help message
 
 Examples:
   ghidra-mcp --server http://127.0.0.1:8080/              # stdio mode
